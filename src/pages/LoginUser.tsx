@@ -1,9 +1,10 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFocusEffect, useNavigation } from "@react-navigation/native";
 import React, { useCallback, useState } from "react";
-import { SafeAreaView, Text, View, StyleSheet } from "react-native";
+import { SafeAreaView, Text, View, StyleSheet, Image, Dimensions } from "react-native";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
+import logoImg  from '../assets/logo.png'
 import { UserProps } from "./RegistroUser";
 
 type Props = {
@@ -59,6 +60,11 @@ export function LoginUser({ data }: Props) {
     <>
       <View style={styles.container}>
         <SafeAreaView style={styles.content}>
+          <View>
+            <Image
+              style={styles.image}
+             source={logoImg} />
+          </View>
           <View style={styles.input}>
 
           <Input label="email" onChangeText={setInputEmail} />
@@ -98,5 +104,9 @@ const styles = StyleSheet.create({
 
   content: {
     marginTop: 30
+  },
+  image: {
+    width: '100%',
+    height: Dimensions.get("window").width * 0.7,
   }
 });
