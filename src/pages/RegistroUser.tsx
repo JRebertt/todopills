@@ -88,22 +88,23 @@ export function RegistroUser({ data, onPress }: Props) {
   return (
     <>
       <SafeAreaView style={styles.container}>
+          <Text style={styles.title}>
+            Cadastro de Usuario
+          </Text>
         <View>
-          
-
-          <Input label="email" 
+          <Input label="Email" 
           style={styles.input}
           onChangeText={text => setEmail(text.trim())}
           />
 
 
-          <Input label="senha" 
+          <Input label="Senha" 
           style={styles.input}
           onChangeText={setSenha}
 
           />
 
-          <Input label="confirmarSenha" 
+          <Input label="Confirmar Senha" 
           style={styles.input}
           onChangeText={setSenha}
 
@@ -111,25 +112,27 @@ export function RegistroUser({ data, onPress }: Props) {
         </View>
 
         <View>
-          <Input label="telefone" 
+          <Input label="Telefone" 
           style={styles.input}
+          keyboardType="phone-pad"
           onChangeText={setTelefone}
 
           />
 
-          <Input label="endereço" 
+          <Input label="Endereço" 
           style={styles.input}
           onChangeText={setEndereco}
 
           />
 
-          <Input label="sexo" 
+          <Input label="Sexo" 
           style={styles.input}
           onChangeText={setSexo}
           />
 
-          <Input label="idade" 
+          <Input label="Idade" 
           style={styles.input}
+          keyboardType="number-pad"
           onChangeText={setIdade}
           />
         </View>
@@ -167,5 +170,11 @@ const styles = StyleSheet.create({
   },
   containerButton:  {
     paddingVertical: 20,
-  }
+  },
+  title: {
+    textAlign: 'center',
+    fontFamily: fonts.heading,
+    color: colors.heading,
+    fontSize: 40
+  },
 })
