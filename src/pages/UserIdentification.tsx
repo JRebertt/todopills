@@ -22,18 +22,20 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 
 export type UserNameProps = {
-  id: string;
-  nameUser: string;
+  id?: string;
+ Object?: {
+    nameUser : string
+  }
  
 }
-type Props = {
+export type Props = {
   data: UserNameProps;
-  onPress: () => void;
 }
 
-export function UserIdentification({ data, onPress }: Props) {
+export function UserIdentification({ data }: Props) {
   const [isFocused, setIsFocused]  = useState(false);
   const [ isFilled, setIsFiled ]  = useState(false);
+
   const [ nameUser, setNameUser ] = useState<String>();
   
 
@@ -60,7 +62,7 @@ export function UserIdentification({ data, onPress }: Props) {
       type: 'success',
       text1: 'Nome adicionado com sucesso'
     })
-    console.log(newData);
+    // console.log(newData);
   }catch(err) {
     console.log(err);
 

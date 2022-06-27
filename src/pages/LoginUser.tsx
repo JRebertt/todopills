@@ -29,10 +29,13 @@ export function LoginUser({ data }: Props) {
   );
 
   const [inputEmail, setInputEmail] = useState("");
+  const [inputSenha, setInputSenha] = useState("");
+
   function handleLogin(id: string) {
     setInputEmail(inputEmail);
+    setInputSenha(inputSenha)
 
-    const Tfind = dataTem.find((item) => inputEmail === item.email.trim());
+    const Tfind = dataTem.find((item) => inputEmail === item.email.trim() && inputSenha === item.senha.trim() );
 
     if (Tfind) {
       handleStart()
@@ -60,7 +63,10 @@ export function LoginUser({ data }: Props) {
 
           <Input label="email" onChangeText={setInputEmail} />
 
-          <Input label="senha" />
+          <Input label="senha"
+          onChangeText={setInputSenha}
+          
+          />
           </View>
 
           <View style={styles.button} >
