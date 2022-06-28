@@ -73,3 +73,12 @@ Em seguida vamos para a tela de listagem e Cadastros de remedios
 [![Whats-App-Image-2022-06-28-at-08-49-48-9.jpg](https://i.postimg.cc/KYjDqJvb/Whats-App-Image-2022-06-28-at-08-49-48-9.jpg)](https://postimg.cc/ns8mMKDS)
 
 [![Whats-App-Image-2022-06-28-at-08-49-48-10.jpg](https://i.postimg.cc/YSTYX7sN/Whats-App-Image-2022-06-28-at-08-49-48-10.jpg)](https://postimg.cc/8FB752Ds)
+
+
+
+# Armazenamento 
+
+Para salvarmos os dados como por exemplo cadastro do usuário, medicações, optei por usar :
+AsyncStorege
+
+É um banco de dado local, para armazenamento de dados, nele foram criados algumas coleções, que seriam os grupos de armazenamento, após isso fizemos os tratamento de dados utilizando, objetos, arrays, isso tudo com uma ferramenta muito utilizado do próprio react que seriam os Hooks, como useState, useEffect, entre outros!!
